@@ -53,10 +53,11 @@ body {
   color: rgba(29, 42, 159, 0.75);
   font-size: 3.5rem;
   border: solid rgb(14, 140, 44);
+  height: 70px;
 }
 
 .calculator-grid__output__current {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2.5rem;
   border: dotted #a01111;
 }
