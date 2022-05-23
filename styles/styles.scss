@@ -34,11 +34,11 @@
 }
 
 
-.calculator-grid__twospan {
+.calculator-grid__twospan__allclear {
     grid-column: span 2;
-    color: #adf802;
+    color: #000000;
     background-color: rgba(230, 93, 171, 0.8);
-    border: solid red;
+    border: solid rgb(0, 0, 0);
   }
 
   .calculator-grid__output{
@@ -69,4 +69,11 @@ border:dotted #a01111;
   }
       
 };
+
+.calculator-grid__twospan__equals {
+    grid-column: span 2;
+    color: #000000;
+    background-color: rgba(230, 93, 171, 0.8);
+    border: solid rgb(0, 0, 0);
+  }
 
