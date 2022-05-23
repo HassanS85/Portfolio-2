@@ -7,8 +7,7 @@ const previousTextElement = document.querySelector(".calculator-grid__output__pr
 const currentTextElement = document.querySelector(".calculator-grid__output__current")
 
 let expressionArray = [];
-let tempArray = [];
-let newArray = [];
+
 
 
 
@@ -56,50 +55,56 @@ const printUserInput = (event) => {
         previousTextElement.innerText = num
 
     } else if (event.target.value === "=") {
-        sortArray(expressionArray)
-        console.log(expressionArray)
-        resultExpression(expressionArray)
-    }   
+        let result = sortArray(expressionArray)
+        currentTextElement.innerText = toString(result)
+
+    }
 }
 
-const sortArray = (Array) => {
-    let tempArray = [];
-    let newArray = [];
-    Array.forEach(i => {
-        if (parseFloat(i) || parseFloat === 0) {
-            console.log(i)
-            tempArray.push(i)
-        } else if (i === "+" || i === "-" || i === "*" || i === "÷") {
-            //temp array contains a multiple strings, the code below will join those multiple strings into one, change that string to a number, and then push that number into a new array. 
-            newArray.push(parseFloat(tempArray.join("")))
-            newArray.push(i)
-            tempArray = []
-        }
+// Only will work for an array consisting of 3 elements.
+// Array[0] must be a one digit integer
+// Array[1] must be an operator (+-/*)
+// Array[2] must be a one digit integer
+ const sortArray = (Array) => {
+    operand_0 = parseFloat(Array[0])
+    operator = Array[1]
+    operand_1 = parseFloat(Array[2])
+
+    console.log(operator_0)
+    console.log(operator)
+    console.log(operator_1)
+
+    if (operator === "+") {
+        return operator_0 + operator_1
+    }
+    else if (operator ===  "-")
+    {
+        return operator_0 - operator_1
+    }
+    else if (operator === "*")
+    {
+        return operator_0 * operator_1
+    }
+    else if (operator ===  "÷")
+    {
+        return operator_0 / operator_1
+    }
         
-    })
      
-    newArray.push(parseFloat(tempArray.join("")))
-    console.log(newArray)
 }
 
 
-// const resultExpression = (calcarray) => {
+const resultExpression = (calcarray) => {
 
-//     for (let index = 0; index < calcarray.length; index++) {
-//         if (calcarray[index] === "+") {
-//             let initResult = (calcarray[index -1]/calcarray[index + 1]);
-//             console.log(initResult);
-//             calcarray.splice((index-1), 3, initResult)
-//             console.log(calcarray);
-//             return resultExpression();
-//         } 
-//     }   
-// }
-
-
-
-
-
+    for (let index = 0; index < calcarray.length; index++) {
+        if (calcarray[index] === "+") {
+            let initResult = (calcarray[index -1]/calcarray[index + 1]);
+            console.log(initResult);
+            calcarray.splice((index-1), 3, initResult)
+            console.log(calcarray);
+        }
+    }
+}
 
 
 
@@ -127,5 +132,4 @@ deleteButton.forEach(input => {
 allClearButton.forEach(input => {
     input.addEventListener("click", printUserInput)
 });
-
 
