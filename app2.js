@@ -61,7 +61,7 @@ const printUserInput = (event) => {
     }
 }
 
-// Only will work for an array consisting of 3 elements.
+// Will only work for an array consisting of 3 elements currently
 // Array[0] must be a one digit integer
 // Array[1] must be an operator (+-/*)
 // Array[2] must be a one digit integer
