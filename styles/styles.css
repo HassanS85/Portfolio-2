@@ -59,7 +59,7 @@ body {
 .calculator-grid__output__current {
   color: rgb(0, 0, 0);
   font-size: 2.5rem;
-  border: dotted #a01111;
+  height: 70px;
 }
 
 .calculator-grid__twospan__equals {
