@@ -83,28 +83,6 @@ const sortArray = (Array) => {
 }
 
 
-// const resultExpression = (calcarray) => {
-
-//     for (let index = 0; index < calcarray.length; index++) {
-//         if (calcarray[index] === "+") {
-//             let initResult = (calcarray[index -1]/calcarray[index + 1]);
-//             console.log(initResult);
-//             calcarray.splice((index-1), 3, initResult)
-//             console.log(calcarray);
-//             return resultExpression();
-//         } 
-//     }   
-// }
-
-
-
-
-
-
-
-
-
-
 
 
 numberButtons.forEach(input => {
